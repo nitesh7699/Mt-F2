@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=b, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/index.css">
 </head>
@@ -16,15 +16,15 @@
     <button id="btn">Search</button>
   </div>
   <div id="btn-container">
-    <button>Sort A-Z</button>
-    <button>Sort Z-A</button>
-    <button>Sort by Marks</button>
-    <button>Sort by Passing</button>
-    <button>Sort by Class</button>
-    <button>Sort by Gender</button>
+    <button id="az">Sort A-Z</button>
+    <button id="za">Sort Z-A</button>
+    <button id="marks">Sort by Marks</button>
+    <button id="pass">Sort by Passing</button>
+    <button id="class">Sort by Class</button>
+    <button id="gender">Sort by Gender</button>
   </div>
   <table id="Student-table" border="1">
-    <tbody>
+    <thead>
       <tr>
         <th>Id</th>
         <th>Name</th>
@@ -35,9 +35,17 @@
         <th>Email</th>
 
       </tr>
-    </tbody>
-  </table>
-</main>
+      
+    
 
+    </thead>
+  </table>
+  
+  <div id="gender">
+    <table id="male"></table>
+    <table id="female"></table>
+  </div>
+</main>
+<script src="/index.js"></script>
 </body>
 </html>

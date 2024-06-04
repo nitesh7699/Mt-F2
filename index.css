@@ -41,3 +41,12 @@
   width: 95%;
   
 }
+/*#gender{
+  display: flex;
+  margin: 10px;
+  
+}*/
+#gender table{
+  width: 95%;
+  margin: 10px;
+}
