@@ -1,3 +1,4 @@
+
 const studentList = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email":"cayre0@cam.ac.uk","gender":"Male","img_src":"https://robohash.org/corporisquiaperiam.png?size=50x50&set=set1","class":11,"marks":18,"passing":false,"city":"Moorreesburg"},
 {"id":2,"first_name":"Abrahan","last_name":"Seabrocke","email":"aseabrocke1@ocn.ne.jp","gender":"Male","img_src":"https://robohash.org/autiuredistinctio.png?size=50x50&set=set1","class":3,"marks":27,"passing":true,"city":"Kampong Thom"},
 {"id":3,"first_name":"Nathanael","last_name":"Laye","email":"nlaye2@typepad.com","gender":"Male","img_src":"https://robohash.org/dolorumsedut.png?size=50x50&set=set1","class":10,"marks":89,"passing":false,"city":"Niquinohomo"},
@@ -102,6 +103,9 @@ const studentList = [{"id":1,"first_name":"Chadwick","last_name":"Ayre","email":
 
 let table = document.querySelector("#Student-table");
 
+//search
+
+
 
 
 
@@ -148,6 +152,42 @@ for(let val of studentList){
 }
 
 
+/*document.getElementById("search_bar").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    filterTable();
+  }
+});
+
+function filterTable() {
+  //var input, filter, table, tr, td, i, txtValue;
+  let input = document.getElementById("search_bar");
+  let filter = input.value.toUpperCase();
+  let table = document.getElementById("Student-table");
+  let tr = table.getElementsByTagName("tr");
+
+  for (let i = 1; i < tr.length; i++) {
+    let found = false;
+    let td = tr[i].getElementsByTagName("td");
+    for (let j = 0; j < td.length; j++) {
+      let cell = td[j];
+      if (cell) {
+       let  txtValue = cell.textContent || cell.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          found = true;
+          break;
+        }
+      }
+    }
+    if (found) {
+      tr[i].style.display = "";
+    } else {
+      tr[i].style.display = "none";
+    }
+  }
+}*/
+
+
+
 //sort A-Z
 
 document.getElementById("az").addEventListener("click",()=>{
@@ -192,6 +232,7 @@ document.getElementById("za").addEventListener("click",()=>{
       return 1
     }
   })
+
   let  i = 0;
   
   for(let val of zaArr){
@@ -204,13 +245,18 @@ document.getElementById("za").addEventListener("click",()=>{
        document.querySelectorAll(".marks")[i].innerText = `${val.marks}`;
        document.querySelectorAll(".pass")[i].innerText = `${ val.passing ? "Pass" : "Fail"}`
        document.querySelectorAll(".email")[i].innerText = `${val.email}`;
-      
+       i++;
+       
+    
+    
+     
+   
 
 
 
    
    
-    i++;
+    
   }
 
 })
@@ -263,6 +309,7 @@ marksArr.sort((a,b)=>{
 
   let i = 0
     for(let val of passArr){
+      
     
       document.querySelectorAll(".s-id")[i].innerText = `${val.id}`;
       document.querySelectorAll(".name")[i].innerHTML = `<img src=${val.img_src} alt="photo" width="20" height="20">
@@ -316,6 +363,7 @@ marksArr.sort((a,b)=>{
   }
 
   })
+
  
 
 
@@ -455,18 +503,3 @@ marksArr.sort((a,b)=>{
   })
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
